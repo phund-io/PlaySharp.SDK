@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F24761CD-2436-4E6A-A930-038918926945}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PlaySharp.SDK</RootNamespace>
+    <AssemblyName>PlaySharp.SDK.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\..\tools\key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="JetBrains.Annotations">
+      <HintPath>..\Deploy\Core\JetBrains.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX">
+      <HintPath>..\Deploy\References\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\tools\GlobalAssemblyInfo.cs">
+      <Link>Properties\GlobalAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="Game\GameState.cs" />
+    <Compile Include="Events\OnDXBeginScene.cs" />
+    <Compile Include="Events\OnDXEndScene.cs" />
+    <Compile Include="Events\OnDXPostReset.cs" />
+    <Compile Include="Events\OnDXPreReset.cs" />
+    <Compile Include="Events\OnDXPresent.cs" />
+    <Compile Include="Events\OnGameChat.cs" />
+    <Compile Include="Events\OnGameDraw.cs" />
+    <Compile Include="Events\OnGameEnd.cs" />
+    <Compile Include="Events\OnGameEvent.cs" />
+    <Compile Include="Events\OnGameInput.cs" />
+    <Compile Include="Events\OnGameStart.cs" />
+    <Compile Include="Events\OnGameStateChanged.cs" />
+    <Compile Include="Events\OnGameUpdate.cs" />
+    <Compile Include="Events\OnIssueOrder.cs" />
+    <Compile Include="Events\OnSetRenderTarget.cs" />
+    <Compile Include="Events\OnWndProc.cs" />
+    <Compile Include="Game\DamageType.cs" />
+    <Compile Include="ImageLoader\ImageType.cs" />
+    <Compile Include="Orbwalker\OnAttack.cs" />
+    <Compile Include="Orbwalker\OnPostAttack.cs" />
+    <Compile Include="Orbwalker\OnPreAttack.cs" />
+    <Compile Include="TargetSelector\OnTargetChanged.cs" />
+    <Compile Include="Orbwalker\OrbwalkingMode.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\tools\key.snk">
+      <Link>Properties\key.snk</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ObjectManager\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>mkdir "$(SolutionDir)Deploy\References\"
+copy /Y "$(TargetDir)$(TargetName).dll" "$(SolutionDir)Deploy\References\"
+copy /Y "$(TargetDir)$(TargetName).pdb" "$(SolutionDir)Deploy\References\"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
