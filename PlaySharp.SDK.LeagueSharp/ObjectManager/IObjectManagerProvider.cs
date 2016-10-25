@@ -137,6 +137,10 @@ namespace PlaySharp.SDK.ObjectManager
             this.Providers = providers;
         }
 
+        public LeagueObjectManager()
+        {
+        }
+
         public IObjectManagerProvider ActiveProvider { get; protected set; }
 
         public Obj_AI_Hero Hero => this.ActiveProvider.Hero;
