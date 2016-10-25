@@ -30,7 +30,7 @@ namespace PlaySharp.SDK.ObjectManager
 
         IEnumerable<Lazy<TProvider, TProviderMetadata>> Providers { [NotNull] [ItemNotNull] get; }
 
-        void Activate(TProvider provider); // TODO: is this needed for special use?
+        void Activate([NotNull] TProvider provider); // TODO: is this needed for special use?
     }
 
     /// <summary>
@@ -116,7 +116,7 @@ namespace PlaySharp.SDK.ObjectManager
     [PublicAPI]
     [SecuritySafeCritical]
     [Export(typeof(IObjectManager))]
-    public class LeagueObjectManager : IObjectManager
+    public class LeagueObjectManager : IObjectManager, IPartImportsSatisfiedNotification
     {
         [ImportingConstructor]
         public LeagueObjectManager(
@@ -135,6 +135,8 @@ namespace PlaySharp.SDK.ObjectManager
 
             this.EventAggregator = eventAggregator;
             this.Providers = providers;
+
+            this.OnImportsSatisfied();
         }
 
         public LeagueObjectManager()
@@ -151,7 +153,7 @@ namespace PlaySharp.SDK.ObjectManager
         [Import(typeof(IEventAggregator))]
         protected Lazy<IEventAggregator> EventAggregator { get; set; }
 
-        public void Activate([NotNull] IObjectManagerProvider provider)
+        public void Activate(IObjectManagerProvider provider)
         {
             if (provider == null)
             {
@@ -179,6 +181,12 @@ namespace PlaySharp.SDK.ObjectManager
         public ParallelQuery<TUnit> GetParallel<TUnit>() where TUnit : GameObject, new()
         {
             return this.ActiveProvider.GetParallel<TUnit>();
+        }
+
+        public void OnImportsSatisfied()
+        {
+            // activate default or last selected provider
+            this.Activate(this.Providers.First().Value);
         }
     }
 }
