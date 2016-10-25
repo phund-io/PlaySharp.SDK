@@ -15,6 +15,8 @@ namespace PlaySharp.SDK.ObjectManager
 
     using LeagueSharp;
 
+    using PlaySharp.Toolkit.EventAggregator;
+
     /// <summary>
     /// Lazy Provider accessor.
     /// </summary>
@@ -27,6 +29,8 @@ namespace PlaySharp.SDK.ObjectManager
         TProvider ActiveProvider { [NotNull] get; }
 
         IEnumerable<Lazy<TProvider, TProviderMetadata>> Providers { [NotNull] [ItemNotNull] get; }
+
+        void Activate(TProvider provider); // TODO: is this needed for special use?
     }
 
     /// <summary>
@@ -114,12 +118,44 @@ namespace PlaySharp.SDK.ObjectManager
     [Export(typeof(IObjectManager))]
     public class LeagueObjectManager : IObjectManager
     {
-        public IObjectManagerProvider ActiveProvider { get; }
+        [ImportingConstructor]
+        public LeagueObjectManager(
+            [NotNull] [Import(typeof(IEventAggregator))] Lazy<IEventAggregator> eventAggregator,
+            [NotNull] [ImportMany(typeof(IObjectManagerProvider))] IEnumerable<Lazy<IObjectManagerProvider, IObjectManagerProviderMetadata>> providers)
+        {
+            if (eventAggregator == null)
+            {
+                throw new ArgumentNullException(nameof(eventAggregator));
+            }
+
+            if (providers == null)
+            {
+                throw new ArgumentNullException(nameof(providers));
+            }
+
+            this.EventAggregator = eventAggregator;
+            this.Providers = providers;
+        }
+
+        public IObjectManagerProvider ActiveProvider { get; protected set; }
+
+        public Obj_AI_Hero Hero => this.ActiveProvider.Hero;
 
         [ImportMany(typeof(IObjectManagerProvider))]
         public IEnumerable<Lazy<IObjectManagerProvider, IObjectManagerProviderMetadata>> Providers { get; protected set; }
 
-        public Obj_AI_Hero Hero => this.ActiveProvider.Hero;
+        [Import(typeof(IEventAggregator))]
+        protected Lazy<IEventAggregator> EventAggregator { get; set; }
+
+        public void Activate([NotNull] IObjectManagerProvider provider)
+        {
+            if (provider == null)
+            {
+                throw new ArgumentNullException(nameof(provider));
+            }
+
+            this.ActiveProvider = provider;
+        }
 
         public IEnumerable<TUnit> Get<TUnit>() where TUnit : GameObject, new()
         {
