@@ -66,8 +66,7 @@
     <Compile Include="Events\LeagueDrawingEventService.cs" />
     <Compile Include="Events\LeagueEventService.cs" />
     <Compile Include="ImageLoader\LeagueImageLoader.cs" />
-    <Compile Include="ObjectManager\IObjectManager.cs" />
-    <Compile Include="ObjectManager\LeagueObjectManager.cs" />
+    <Compile Include="ObjectManager\IObjectManagerProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -14,7 +14,7 @@ namespace PlaySharp.SDK.ObjectManager
 
     [PublicAPI]
     [SecuritySafeCritical]
-    public interface IObjectManager : IObjectManager<Entity, uint, Hero>
+    public interface IObjectManager : IObjectManagerProvider<Entity, uint, Hero>
     {
         IEnumerable<LinearProjectile> LinearProjectiles { [SecuritySafeCritical] get; }
 

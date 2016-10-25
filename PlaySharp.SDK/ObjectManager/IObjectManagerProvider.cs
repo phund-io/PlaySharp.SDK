@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="IObjectManager.cs" company="PlaySharp">
+// <copyright file="IObjectManagerProvider.cs" company="PlaySharp">
 //     Copyright (c) PlaySharp. All rights reserved.
 // </copyright>
 // --------------------------------------------------------------------------------------------------------------------
@@ -13,7 +13,7 @@ namespace PlaySharp.SDK.ObjectManager
 
     [PublicAPI]
     [SecuritySafeCritical]
-    public interface IObjectManager<in TBaseType, in TIndexType, out THeroType>
+    public interface IObjectManagerProvider<in TBaseType, in TIndexType, out THeroType>
         where THeroType : class, new()
         where TBaseType : class, new()
     {

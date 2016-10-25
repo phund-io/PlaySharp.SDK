@@ -42,6 +42,10 @@
     <Reference Include="log4net">
       <HintPath>..\Deploy\Core\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="PlaySharp.Toolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7e3dc52b16ce4f66, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Games\ps\Core\PlaySharp.Toolkit.dll</HintPath>
+    </Reference>
     <Reference Include="SharpDX">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Deploy\References\SharpDX.dll</HintPath>
@@ -57,7 +61,7 @@
     <Compile Include="ImageLoader\IImageCache.cs" />
     <Compile Include="ImageLoader\IImageLoader.cs" />
     <Compile Include="ImageLoader\ImageCache.cs" />
-    <Compile Include="ObjectManager\IObjectManager.cs" />
+    <Compile Include="ObjectManager\IObjectManagerProvider.cs" />
     <Compile Include="Orbwalker\IOrbwalker.cs" />
     <Compile Include="TargetSelector\ITargetSelector.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,10 +79,6 @@
     <ProjectReference Include="..\PlaySharp.SDK.Model\PlaySharp.SDK.Model.csproj">
       <Project>{f24761cd-2436-4e6a-a930-038918926945}</Project>
       <Name>PlaySharp.SDK.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PlaySharp.Toolkit\PlaySharp.Toolkit.csproj">
-      <Project>{1d22f6e6-47f8-48b1-b743-d801666171a3}</Project>
-      <Name>PlaySharp.Toolkit</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

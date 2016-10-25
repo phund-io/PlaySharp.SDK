@@ -25,7 +25,7 @@ namespace PlaySharp.SDK.ImageLoader
     [Export(typeof(IImageLoader))]
     public class LeagueImageLoader : IImageLoader
     {
-        private static readonly ILog Log = Logs.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
+        private static readonly ILog Log = AssemblyLogs.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
         public LeagueImageLoader()
         {

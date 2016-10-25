@@ -24,7 +24,7 @@ namespace PlaySharp.SDK.ImageLoader
     [Export(typeof(IImageCache))]
     public class ImageCache : IImageCache
     {
-        private static readonly ILog Log = Logs.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
+        private static readonly ILog Log = AssemblyLogs.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
         [SecuritySafeCritical]
         public ImageCache()
