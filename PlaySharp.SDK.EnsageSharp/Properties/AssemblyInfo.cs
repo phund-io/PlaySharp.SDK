@@ -1,8 +1,6 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="AssemblyInfo.cs" company="PlaySharp">
-//     Copyright (c) PlaySharp. All rights reserved.
+﻿// <copyright file="AssemblyInfo.cs" company="PlaySharp">
+//    Copyright (c) 2016 PlaySharp.
 // </copyright>
-// --------------------------------------------------------------------------------------------------------------------
 using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Security;

@@ -1,16 +1,14 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="IObjectManager.cs" company="PlaySharp">
-//     Copyright (c) PlaySharp. All rights reserved.
+﻿// <copyright file="IObjectManager.cs" company="PlaySharp">
+//    Copyright (c) 2016 PlaySharp.
 // </copyright>
-// --------------------------------------------------------------------------------------------------------------------
-namespace PlaySharp.SDK.ObjectManager
+namespace PlaySharp.SDK.Objects
 {
     using System.Collections.Generic;
     using System.Security;
 
     using Ensage;
 
-    using JetBrains.Annotations;
+    using PlaySharp.Toolkit.Helper.Annotations;
 
     [PublicAPI]
     [SecuritySafeCritical]
@@ -18,9 +16,9 @@ namespace PlaySharp.SDK.ObjectManager
     {
         IEnumerable<LinearProjectile> LinearProjectiles { [SecuritySafeCritical] get; }
 
-        Player Player { [SecuritySafeCritical] get; }
-
         IEnumerable<ParticleEffect> ParticleEffects { [SecuritySafeCritical] get; }
+
+        Player Player { [SecuritySafeCritical] get; }
 
         IEnumerable<Projectile> Projectiles { [SecuritySafeCritical] get; }
 

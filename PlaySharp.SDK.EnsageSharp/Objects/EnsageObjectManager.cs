@@ -1,9 +1,7 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="EnsageObjectManager.cs" company="PlaySharp">
-//     Copyright (c) PlaySharp. All rights reserved.
+﻿// <copyright file="EnsageObjectManager.cs" company="PlaySharp">
+//    Copyright (c) 2016 PlaySharp.
 // </copyright>
-// --------------------------------------------------------------------------------------------------------------------
-namespace PlaySharp.SDK.ObjectManager
+namespace PlaySharp.SDK.Objects
 {
     using System.Collections.Generic;
     using System.ComponentModel.Composition;
@@ -12,7 +10,7 @@ namespace PlaySharp.SDK.ObjectManager
 
     using Ensage;
 
-    using JetBrains.Annotations;
+    using PlaySharp.Toolkit.Helper.Annotations;
 
     [PublicAPI]
     [SecuritySafeCritical]

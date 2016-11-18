@@ -1,13 +1,11 @@
-// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="DamageType.cs" company="PlaySharp">
-//     Copyright (c) PlaySharp. All rights reserved.
+//    Copyright (c) 2016 PlaySharp.
 // </copyright>
-// --------------------------------------------------------------------------------------------------------------------
 namespace PlaySharp.SDK.Game
 {
     using System.Security;
 
-    using JetBrains.Annotations;
+    using PlaySharp.Toolkit.Helper.Annotations;
 
     [PublicAPI]
     [SecuritySafeCritical]

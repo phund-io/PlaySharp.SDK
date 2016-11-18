@@ -1,14 +1,12 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="OnTargetChanged.cs" company="PlaySharp">
-//     Copyright (c) PlaySharp. All rights reserved.
+﻿// <copyright file="OnTargetChanged.cs" company="PlaySharp">
+//    Copyright (c) 2016 PlaySharp.
 // </copyright>
-// --------------------------------------------------------------------------------------------------------------------
-namespace PlaySharp.SDK.TargetSelector
+namespace PlaySharp.SDK.Targetselection
 {
     using System;
     using System.Security;
 
-    using JetBrains.Annotations;
+    using PlaySharp.Toolkit.Helper.Annotations;
 
     [PublicAPI]
     [SecuritySafeCritical]

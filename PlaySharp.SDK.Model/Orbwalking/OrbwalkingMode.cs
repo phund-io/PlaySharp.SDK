@@ -1,13 +1,11 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="OrbwalkingMode.cs" company="PlaySharp">
-//     Copyright (c) PlaySharp. All rights reserved.
+﻿// <copyright file="OrbwalkingMode.cs" company="PlaySharp">
+//    Copyright (c) 2016 PlaySharp.
 // </copyright>
-// --------------------------------------------------------------------------------------------------------------------
-namespace PlaySharp.SDK.Orbwalker
+namespace PlaySharp.SDK.Orbwalking
 {
     using System.Security;
 
-    using JetBrains.Annotations;
+    using PlaySharp.Toolkit.Helper.Annotations;
 
     [PublicAPI]
     [SecuritySafeCritical]
@@ -49,7 +47,7 @@ namespace PlaySharp.SDK.Orbwalker
         None,
 
         /// <summary>
-        /// The flee mode.
+        ///     The flee mode.
         /// </summary>
         Flee
     }

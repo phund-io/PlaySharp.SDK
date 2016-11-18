@@ -1,14 +1,12 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="OnGameEnd.cs" company="PlaySharp">
-//     Copyright (c) PlaySharp. All rights reserved.
+﻿// <copyright file="OnGameEnd.cs" company="PlaySharp">
+//    Copyright (c) 2016 PlaySharp.
 // </copyright>
-// --------------------------------------------------------------------------------------------------------------------
 namespace PlaySharp.SDK.Events
 {
     using System;
     using System.Security;
 
-    using JetBrains.Annotations;
+    using PlaySharp.Toolkit.Helper.Annotations;
 
     [PublicAPI]
     [SecuritySafeCritical]

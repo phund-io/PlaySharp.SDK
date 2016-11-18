@@ -1,8 +1,6 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="ImageCache.cs" company="PlaySharp">
-//     Copyright (c) PlaySharp. All rights reserved.
+﻿// <copyright file="ImageCache.cs" company="PlaySharp">
+//    Copyright (c) 2016 PlaySharp.
 // </copyright>
-// --------------------------------------------------------------------------------------------------------------------
 namespace PlaySharp.SDK.ImageLoader
 {
     using System;
@@ -11,12 +9,11 @@ namespace PlaySharp.SDK.ImageLoader
     using System.Reflection;
     using System.Security;
 
-    using JetBrains.Annotations;
-
     using log4net;
 
     using PlaySharp.Toolkit.Extensions;
     using PlaySharp.Toolkit.Helper;
+    using PlaySharp.Toolkit.Helper.Annotations;
     using PlaySharp.Toolkit.Logging;
 
     [PublicAPI]

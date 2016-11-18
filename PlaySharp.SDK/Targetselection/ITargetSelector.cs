@@ -1,17 +1,14 @@
-// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="ITargetSelector.cs" company="PlaySharp">
-//     Copyright (c) PlaySharp. All rights reserved.
+//    Copyright (c) 2016 PlaySharp.
 // </copyright>
-// --------------------------------------------------------------------------------------------------------------------
-namespace PlaySharp.SDK.TargetSelector
+namespace PlaySharp.SDK.Targetselection
 {
     using System;
     using System.Collections.Generic;
     using System.Security;
 
-    using JetBrains.Annotations;
-
     using PlaySharp.SDK.Game;
+    using PlaySharp.Toolkit.Helper.Annotations;
 
     using SharpDX;
 

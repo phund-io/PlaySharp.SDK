@@ -33,7 +33,7 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>..\..\tools\key.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>..\tools\key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="JetBrains.Annotations">
@@ -48,6 +48,10 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\Deploy\Core\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="PlaySharp.Toolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7e3dc52b16ce4f66, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Games\ps\Core\PlaySharp.Toolkit.dll</HintPath>
+    </Reference>
     <Reference Include="SharpDX">
       <HintPath>..\Deploy\References\SharpDX.dll</HintPath>
     </Reference>
@@ -60,7 +64,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\tools\GlobalAssemblyInfo.cs">
+    <Compile Include="..\tools\GlobalAssemblyInfo.cs">
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
     <Compile Include="Events\LeagueDrawingEventService.cs" />
@@ -87,10 +91,6 @@
     <ProjectReference Include="..\PlaySharp.SDK\PlaySharp.SDK.csproj">
       <Project>{85c3eedb-9715-4a4e-9c12-7a751517ec95}</Project>
       <Name>PlaySharp.SDK</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PlaySharp.Toolkit\PlaySharp.Toolkit.csproj">
-      <Project>{1d22f6e6-47f8-48b1-b743-d801666171a3}</Project>
-      <Name>PlaySharp.Toolkit</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

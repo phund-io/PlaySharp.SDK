@@ -14,13 +14,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaySharp.SDK.EnsageSharp",
 		{85C3EEDB-9715-4A4E-9C12-7A751517EC95} = {85C3EEDB-9715-4A4E-9C12-7A751517EC95}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaySharp.SDK.LeagueSharp", "PlaySharp.SDK.LeagueSharp\PlaySharp.SDK.LeagueSharp.csproj", "{AF9DEF0F-47B3-4B00-A569-9AB837D7321F}"
-	ProjectSection(ProjectDependencies) = postProject
-		{F24761CD-2436-4E6A-A930-038918926945} = {F24761CD-2436-4E6A-A930-038918926945}
-		{85C3EEDB-9715-4A4E-9C12-7A751517EC95} = {85C3EEDB-9715-4A4E-9C12-7A751517EC95}
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaySharp.SDK.Model", "PlaySharp.SDK.Model\PlaySharp.SDK.Model.csproj", "{F24761CD-2436-4E6A-A930-038918926945}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaySharp.SDK.LeagueSharp", "PlaySharp.SDK.LeagueSharp\PlaySharp.SDK.LeagueSharp.csproj", "{AF9DEF0F-47B3-4B00-A569-9AB837D7321F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{C9CB63B2-1767-4E35-A10C-530B8A8617B6}"
+	ProjectSection(SolutionItems) = preProject
+		tools\GlobalAssemblyInfo.cs = tools\GlobalAssemblyInfo.cs
+		tools\key.snk = tools\key.snk
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,14 +38,14 @@ Global
 		{FA0AC140-174B-417B-A716-66692FF6D470}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA0AC140-174B-417B-A716-66692FF6D470}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA0AC140-174B-417B-A716-66692FF6D470}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AF9DEF0F-47B3-4B00-A569-9AB837D7321F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AF9DEF0F-47B3-4B00-A569-9AB837D7321F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AF9DEF0F-47B3-4B00-A569-9AB837D7321F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AF9DEF0F-47B3-4B00-A569-9AB837D7321F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F24761CD-2436-4E6A-A930-038918926945}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F24761CD-2436-4E6A-A930-038918926945}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F24761CD-2436-4E6A-A930-038918926945}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F24761CD-2436-4E6A-A930-038918926945}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF9DEF0F-47B3-4B00-A569-9AB837D7321F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF9DEF0F-47B3-4B00-A569-9AB837D7321F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF9DEF0F-47B3-4B00-A569-9AB837D7321F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF9DEF0F-47B3-4B00-A569-9AB837D7321F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
