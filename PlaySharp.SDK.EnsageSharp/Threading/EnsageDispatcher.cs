@@ -1,4 +1,4 @@
-﻿// <copyright file="GameDispatcher.cs" company="PlaySharp">
+﻿// <copyright file="EnsageDispatcher.cs" company="PlaySharp">
 //    Copyright (c) 2016 PlaySharp.
 // </copyright>
 namespace PlaySharp.SDK.Threading
@@ -8,9 +8,9 @@ namespace PlaySharp.SDK.Threading
 
     using Ensage;
 
-    public static class GameDispatcher
+    public static class EnsageDispatcher
     {
-        static GameDispatcher()
+        static EnsageDispatcher()
         {
             Game.OnUpdate += UpdateDispatcher;
             Game.OnIngameUpdate += IngameUpdateDispatcher;
@@ -26,12 +26,12 @@ namespace PlaySharp.SDK.Threading
         /// <param name="action"></param>
         public static void BeginInvoke(Action action)
         {
-            GameSynchronizationContext.Instance.Post(state => action(), null);
+            EnsageSynchronizationContext.Instance.Post(state => action(), null);
         }
 
         public static void InvokeEvent(Action action)
         {
-            var gameContext = GameSynchronizationContext.Instance;
+            var gameContext = EnsageSynchronizationContext.Instance;
             var context = SynchronizationContext.Current;
 
             try

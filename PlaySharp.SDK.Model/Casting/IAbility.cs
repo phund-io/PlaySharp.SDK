@@ -11,9 +11,11 @@ namespace PlaySharp.SDK.Casting
 
     [PublicAPI]
     [SecuritySafeCritical]
-    public interface IAbility<out TAbility, in TUnit>
+    public interface IAbility<out TAbility, in TUnit, out TOwner>
     {
         TAbility Instance { [NotNull] get; }
+
+        TOwner Owner { [NotNull] get; }
 
         float GetDamage([NotNull] TUnit target);
 

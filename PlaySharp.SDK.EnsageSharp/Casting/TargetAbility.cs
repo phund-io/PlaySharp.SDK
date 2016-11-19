@@ -19,7 +19,7 @@ namespace PlaySharp.SDK.Casting
 
     [PublicAPI]
     [SecuritySafeCritical]
-    public class TargetAbility : EnsageTargetAbilityBase
+    public class TargetAbility : TargetAbilityBase
     {
         private static readonly ILog Log = AssemblyLogs.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 

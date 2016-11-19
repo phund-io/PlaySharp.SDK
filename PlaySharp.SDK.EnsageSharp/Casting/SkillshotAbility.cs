@@ -20,7 +20,7 @@ namespace PlaySharp.SDK.Casting
 
     [PublicAPI]
     [SecuritySafeCritical]
-    public class SkillshotAbility : EnsageSkillshotAbilityBase
+    public class SkillshotAbility : SkillshotAbilityBase
     {
         private static readonly ILog Log = AssemblyLogs.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 

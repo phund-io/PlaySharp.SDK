@@ -43,12 +43,22 @@
       <HintPath>..\..\PlaySharp.Toolkit\Deploy\References\SharpDX.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\tools\GlobalAssemblyInfo.cs">
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Casting\IAbility.cs" />
+    <Compile Include="Casting\ISelfcastAbility.cs" />
+    <Compile Include="Casting\ISkillshotAbility.cs" />
+    <Compile Include="Casting\ITargetAbility.cs" />
+    <Compile Include="Composition\ActiveServiceChangedEventArgs.cs" />
+    <Compile Include="Composition\ContextContainer.cs" />
+    <Compile Include="Composition\IConfigurationRepository.cs" />
+    <Compile Include="Composition\IServiceContext.cs" />
+    <Compile Include="Composition\IServiceRepository.cs" />
     <Compile Include="Game\GameState.cs" />
     <Compile Include="Events\OnDXBeginScene.cs" />
     <Compile Include="Events\OnDXEndScene.cs" />
@@ -67,10 +77,16 @@
     <Compile Include="Events\OnSetRenderTarget.cs" />
     <Compile Include="Events\OnWndProc.cs" />
     <Compile Include="Game\DamageType.cs" />
+    <Compile Include="ImageLoader\IImageCache.cs" />
     <Compile Include="ImageLoader\ImageType.cs" />
+    <Compile Include="Objects\IObjectManagerProvider.cs" />
+    <Compile Include="Orbwalking\IOrbwalker.cs" />
     <Compile Include="Orbwalking\OnAttack.cs" />
     <Compile Include="Orbwalking\OnPostAttack.cs" />
     <Compile Include="Orbwalking\OnPreAttack.cs" />
+    <Compile Include="Prediction\IPrediction.cs" />
+    <Compile Include="Prediction\IPredictionOutput.cs" />
+    <Compile Include="Targetselection\ITargetSelector.cs" />
     <Compile Include="Targetselection\OnTargetChanged.cs" />
     <Compile Include="Orbwalking\OrbwalkingMode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,9 +96,7 @@
       <Link>Properties\key.snk</Link>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Objects\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>mkdir "$(SolutionDir)Deploy\References\"

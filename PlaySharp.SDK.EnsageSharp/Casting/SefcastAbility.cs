@@ -5,6 +5,7 @@ namespace PlaySharp.SDK.Casting
 {
     using System;
     using System.Reflection;
+    using System.Security;
 
     using Ensage;
 
@@ -16,7 +17,9 @@ namespace PlaySharp.SDK.Casting
 
     using SharpDX;
 
-    public class SefcastAbility : EnsageSefcastAbilityBase
+    [PublicAPI]
+    [SecuritySafeCritical]
+    public class SefcastAbility : SelfcastAbilityBase
     {
         private static readonly ILog Log = AssemblyLogs.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 

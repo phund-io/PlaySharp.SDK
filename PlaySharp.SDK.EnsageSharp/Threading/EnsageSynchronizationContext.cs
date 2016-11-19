@@ -1,4 +1,4 @@
-﻿// <copyright file="GameSynchronizationContext.cs" company="PlaySharp">
+﻿// <copyright file="EnsageSynchronizationContext.cs" company="PlaySharp">
 //    Copyright (c) 2016 PlaySharp.
 // </copyright>
 namespace PlaySharp.SDK.Threading
@@ -7,16 +7,16 @@ namespace PlaySharp.SDK.Threading
     using System.Collections.Generic;
     using System.Threading;
 
-    public class GameSynchronizationContext : SynchronizationContext
+    public class EnsageSynchronizationContext : SynchronizationContext
     {
         private static readonly object SyncRoot = new object();
 
-        private static GameSynchronizationContext instance;
+        private static EnsageSynchronizationContext instance;
 
         private readonly ConcurrentQueue<KeyValuePair<SendOrPostCallback, object>> queue =
             new ConcurrentQueue<KeyValuePair<SendOrPostCallback, object>>();
 
-        public static GameSynchronizationContext Instance
+        public static EnsageSynchronizationContext Instance
         {
             get
             {
@@ -26,7 +26,7 @@ namespace PlaySharp.SDK.Threading
                     {
                         if (instance == null)
                         {
-                            instance = new GameSynchronizationContext();
+                            instance = new EnsageSynchronizationContext();
                         }
                     }
                 }
@@ -37,7 +37,7 @@ namespace PlaySharp.SDK.Threading
 
         public override SynchronizationContext CreateCopy()
         {
-            return new GameSynchronizationContext();
+            return new EnsageSynchronizationContext();
         }
 
         public override void Post(SendOrPostCallback d, object state)
