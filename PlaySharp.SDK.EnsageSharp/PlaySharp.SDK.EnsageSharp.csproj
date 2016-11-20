@@ -55,6 +55,7 @@
     <Compile Include="..\tools\GlobalAssemblyInfo.cs">
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Casting\IAbility.cs" />
     <Compile Include="Casting\ISelfcastAbility.cs" />
     <Compile Include="Casting\ISkillshotAbility.cs" />
     <Compile Include="Casting\ITargetAbility.cs" />
@@ -77,6 +78,18 @@
     <Compile Include="Threading\Await.cs" />
     <Compile Include="Threading\EnsageDispatcher.cs" />
     <Compile Include="Threading\EnsageSynchronizationContext.cs" />
+    <Compile Include="Trackers\AbilityObject.cs" />
+    <Compile Include="Trackers\AbilityTrackerRepository.cs" />
+    <Compile Include="Trackers\AttackTrackerRepository.cs" />
+    <Compile Include="Trackers\AttackObject.cs" />
+    <Compile Include="Trackers\DefaultAbilityTracker.cs" />
+    <Compile Include="Trackers\DefaultAttackTracker.cs" />
+    <Compile Include="Trackers\IAbilityObject.cs" />
+    <Compile Include="Trackers\IAbilityTracker.cs" />
+    <Compile Include="Trackers\IAbilityTrackerRepository.cs" />
+    <Compile Include="Trackers\IAttackObject.cs" />
+    <Compile Include="Trackers\IAttackTracker.cs" />
+    <Compile Include="Trackers\IAttackTrackerRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\tools\key.snk">

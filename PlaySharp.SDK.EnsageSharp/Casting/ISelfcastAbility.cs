@@ -11,7 +11,7 @@ namespace PlaySharp.SDK.Casting
 
     [PublicAPI]
     [SecuritySafeCritical]
-    public interface ISelfcastAbility : ISelfcastAbility<Ability, Unit, Unit>
+    public interface ISelfcastAbility : ISelfcastAbility<Ability, Unit, Unit>, IAbility
     {
     }
 }

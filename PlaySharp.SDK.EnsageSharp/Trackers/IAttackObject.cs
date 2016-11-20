@@ -1,7 +1,7 @@
-// <copyright file="ISkillshotAbility.cs" company="PlaySharp">
+﻿// <copyright file="IAttackObject.cs" company="PlaySharp">
 //    Copyright (c) 2016 PlaySharp.
 // </copyright>
-namespace PlaySharp.SDK.Casting
+namespace PlaySharp.SDK.Trackers
 {
     using System.Security;
 
@@ -11,7 +11,8 @@ namespace PlaySharp.SDK.Casting
 
     [PublicAPI]
     [SecuritySafeCritical]
-    public interface ISkillshotAbility : ISkillshotAbility<Ability, Unit, Unit>, IAbility
+    public interface IAttackObject : IAttackObject<string, Unit>
     {
+        NetworkActivity State { get; }
     }
 }

@@ -11,7 +11,7 @@ namespace PlaySharp.SDK.Casting
 
     [PublicAPI]
     [SecuritySafeCritical]
-    public interface ITargetAbility : ITargetAbility<Ability, Unit, Unit>
+    public interface ITargetAbility : ITargetAbility<Ability, Unit, Unit>, IAbility
     {
     }
 }

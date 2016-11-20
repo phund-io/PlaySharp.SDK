@@ -1,4 +1,4 @@
-﻿// <copyright file="EnsageDispatcher.cs" company="PlaySharp">
+// <copyright file="EnsageDispatcher.cs" company="PlaySharp">
 //    Copyright (c) 2016 PlaySharp.
 // </copyright>
 namespace PlaySharp.SDK.Threading

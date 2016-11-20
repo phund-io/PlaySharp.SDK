@@ -12,7 +12,7 @@ namespace PlaySharp.SDK.Composition
 
     [PublicAPI]
     [SecuritySafeCritical]
-    public class ServiceRepositoryBase<TService> : IServiceRepository<TService>
+    public class ServiceRepositoryBase<TService> : CollectionChangedBase, IServiceRepository<TService>
         where TService : class
     {
         protected readonly List<TService> services = new List<TService>();
@@ -94,18 +94,6 @@ namespace PlaySharp.SDK.Composition
             this.ActiveChanged?.Invoke(
                     this,
                     new ActiveServiceChangedEventArgs<TService>(service));
-        }
-
-        protected virtual void OnCollectionChanged(NotifyCollectionChangedAction type, [NotNull] object item)
-        {
-            if (item == null)
-            {
-                throw new ArgumentNullException(nameof(item));
-            }
-
-            this.CollectionChanged?.Invoke(
-                    this,
-                    new NotifyCollectionChangedEventArgs(type, item));
         }
     }
 }

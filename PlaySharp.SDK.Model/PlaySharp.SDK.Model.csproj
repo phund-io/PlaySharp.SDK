@@ -90,6 +90,13 @@
     <Compile Include="Targetselection\OnTargetChanged.cs" />
     <Compile Include="Orbwalking\OrbwalkingMode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Trackers\IAbilityObject.cs" />
+    <Compile Include="Trackers\IAbilityTracker.cs" />
+    <Compile Include="Trackers\IAbilityTrackerRepository.cs" />
+    <Compile Include="Trackers\IAttackObject.cs" />
+    <Compile Include="Trackers\IAttackTracker.cs" />
+    <Compile Include="Trackers\IAttackTrackerRepository.cs" />
+    <Compile Include="Trackers\ITrackableObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\tools\key.snk">

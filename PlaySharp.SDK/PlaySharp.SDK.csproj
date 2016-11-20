@@ -53,6 +53,7 @@
     <Compile Include="..\tools\GlobalAssemblyInfo.cs">
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Composition\CollectionChangedBase.cs" />
     <Compile Include="ImageLoader\IImageLoader.cs" />
     <Compile Include="ImageLoader\ImageCache.cs" />
     <Compile Include="Composition\ContainerRepositoryBase.cs" />
