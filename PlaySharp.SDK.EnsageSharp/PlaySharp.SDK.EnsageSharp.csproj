@@ -77,7 +77,7 @@
     <Compile Include="Composition\EnsageContainerRepository.cs" />
     <Compile Include="Composition\EnsageServiceContext.cs" />
     <Compile Include="Composition\IEnsageServiceContext.cs" />
-    <Compile Include="Providers\EnsageObjectManager.cs" />
+    <Compile Include="Providers\DefaultObjectManager.cs" />
     <Compile Include="Objects\IObjectManager.cs" />
     <Compile Include="Prediction\IPrediction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -15,7 +15,7 @@ namespace PlaySharp.SDK.Composition.Attributes
     [MetadataAttribute]
     [SecuritySafeCritical]
     [AttributeUsage(AttributeTargets.Class)]
-    public class RegisterAbilityTrackerAttribute : ObjectProviderAttribute, ITrackerMetadata
+    public class RegisterAbilityTrackerAttribute : ObjectProviderAttribute, IAbilityTrackerMetadata
     {
         public RegisterAbilityTrackerAttribute(string name, string version = null, string description = null)
             : base(typeof(IAbilityTracker), name, version, description)

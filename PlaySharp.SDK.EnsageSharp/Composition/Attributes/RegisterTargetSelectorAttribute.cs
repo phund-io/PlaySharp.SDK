@@ -15,7 +15,7 @@ namespace PlaySharp.SDK.Composition.Attributes
     [MetadataAttribute]
     [SecuritySafeCritical]
     [AttributeUsage(AttributeTargets.Class)]
-    public class RegisterTargetSelectorAttribute : ObjectProviderAttribute, ITrackerMetadata
+    public class RegisterTargetSelectorAttribute : ObjectProviderAttribute, ITargetSelectorMetadata
     {
         public RegisterTargetSelectorAttribute(string name, string version = null, string description = null)
             : base(typeof(ITargetSelector), name, version, description)

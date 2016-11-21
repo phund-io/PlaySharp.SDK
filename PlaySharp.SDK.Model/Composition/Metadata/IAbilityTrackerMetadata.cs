@@ -1,4 +1,4 @@
-﻿// <copyright file="ITrackerMetadata.cs" company="PlaySharp">
+﻿// <copyright file="IAbilityTrackerMetadata.cs" company="PlaySharp">
 //    Copyright (c) 2016 PlaySharp.
 // </copyright>
 namespace PlaySharp.SDK.Composition.Metadata
@@ -9,7 +9,7 @@ namespace PlaySharp.SDK.Composition.Metadata
 
     [PublicAPI]
     [SecuritySafeCritical]
-    public interface ITrackerMetadata : IServiceMetadata
+    public interface IAbilityTrackerMetadata : IServiceMetadata
     {
     }
 }

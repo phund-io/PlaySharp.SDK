@@ -15,7 +15,7 @@ namespace PlaySharp.SDK.Composition.Attributes
     [MetadataAttribute]
     [SecuritySafeCritical]
     [AttributeUsage(AttributeTargets.Class)]
-    public class RegisterPredictionAttribute : ObjectProviderAttribute, ITrackerMetadata
+    public class RegisterPredictionAttribute : ObjectProviderAttribute, IPredictionMetadata
     {
         public RegisterPredictionAttribute(string name, string version = null, string description = null)
             : base(typeof(IPrediction), name, version, description)
