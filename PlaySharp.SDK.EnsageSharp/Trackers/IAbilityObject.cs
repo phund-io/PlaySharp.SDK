@@ -12,7 +12,7 @@ namespace PlaySharp.SDK.Trackers
 
     [PublicAPI]
     [SecuritySafeCritical]
-    public interface IAbilityObject : IAbilityObject<string, Unit>
+    public interface IAbilityObject : IAbilityObject<Ability>
     {
         IReadOnlyList<ParticleEffect> Particles { get; }
     }

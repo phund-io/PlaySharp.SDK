@@ -65,12 +65,19 @@
     <Compile Include="Casting\SefcastAbility.cs" />
     <Compile Include="Casting\SkillshotAbility.cs" />
     <Compile Include="Casting\TargetAbility.cs" />
+    <Compile Include="Composition\Attributes\RegisterAbilityTrackerAttribute.cs" />
+    <Compile Include="Composition\Attributes\RegisterAttackTrackerAttribute.cs" />
+    <Compile Include="Composition\Attributes\RegisterObjectManagerAttribute.cs" />
+    <Compile Include="Composition\Attributes\RegisterOrbwalkerAttribute.cs" />
+    <Compile Include="Composition\Attributes\RegisterPredictionAttribute.cs" />
+    <Compile Include="Composition\Attributes\RegisterTargetSelectorAttribute.cs" />
+    <Compile Include="Orbwalking\IOrbwalker.cs" />
     <Compile Include="Extensions\UnitExtensions.cs" />
     <Compile Include="Composition\EnsageContainer.cs" />
     <Compile Include="Composition\EnsageContainerRepository.cs" />
     <Compile Include="Composition\EnsageServiceContext.cs" />
     <Compile Include="Composition\IEnsageServiceContext.cs" />
-    <Compile Include="Objects\EnsageObjectManager.cs" />
+    <Compile Include="Providers\EnsageObjectManager.cs" />
     <Compile Include="Objects\IObjectManager.cs" />
     <Compile Include="Prediction\IPrediction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -82,8 +89,8 @@
     <Compile Include="Trackers\AbilityTrackerRepository.cs" />
     <Compile Include="Trackers\AttackTrackerRepository.cs" />
     <Compile Include="Trackers\AttackObject.cs" />
-    <Compile Include="Trackers\DefaultAbilityTracker.cs" />
-    <Compile Include="Trackers\DefaultAttackTracker.cs" />
+    <Compile Include="Providers\DefaultAbilityTracker.cs" />
+    <Compile Include="Providers\DefaultAttackTracker.cs" />
     <Compile Include="Trackers\IAbilityObject.cs" />
     <Compile Include="Trackers\IAbilityTracker.cs" />
     <Compile Include="Trackers\IAbilityTrackerRepository.cs" />
@@ -96,9 +103,7 @@
       <Link>Properties\key.snk</Link>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Orbwalking\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\PlaySharp.SDK.Model\PlaySharp.SDK.Model.csproj">
       <Project>{f24761cd-2436-4e6a-a930-038918926945}</Project>

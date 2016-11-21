@@ -13,7 +13,7 @@ namespace PlaySharp.SDK.Trackers
     [SecuritySafeCritical]
     [Export(typeof(IAttackTrackerRepository))]
     [Export(typeof(IServiceRepository<IAttackTrackerRepository>))]
-    public class AttackTrackerRepository : ServiceRepositoryBase<IAttackTrackerRepository>
+    public class AttackTrackerRepository : ServiceRepository<IAttackTrackerRepository>
     {
     }
 }

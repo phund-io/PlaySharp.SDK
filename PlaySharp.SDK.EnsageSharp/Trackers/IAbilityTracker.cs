@@ -9,7 +9,7 @@ namespace PlaySharp.SDK.Trackers
 
     [PublicAPI]
     [SecuritySafeCritical]
-    public interface IAbilityTracker : IAbilityTracker<string, IAbilityObject>
+    public interface IAbilityTracker : IAbilityTracker<IAbilityObject>
     {
     }
 }

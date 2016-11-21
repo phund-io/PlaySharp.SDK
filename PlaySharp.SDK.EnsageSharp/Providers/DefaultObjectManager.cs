@@ -1,21 +1,22 @@
 ﻿// <copyright file="EnsageObjectManager.cs" company="PlaySharp">
 //    Copyright (c) 2016 PlaySharp.
 // </copyright>
-namespace PlaySharp.SDK.Objects
+namespace PlaySharp.SDK.Providers
 {
     using System.Collections.Generic;
-    using System.ComponentModel.Composition;
     using System.Linq;
     using System.Security;
 
     using Ensage;
 
+    using PlaySharp.SDK.Composition.Attributes;
+    using PlaySharp.SDK.Objects;
     using PlaySharp.Toolkit.Helper.Annotations;
 
     [PublicAPI]
     [SecuritySafeCritical]
-    [Export(typeof(IObjectManager))]
-    public class EnsageObjectManager : IObjectManager
+    [RegisterObjectManager("SDK")]
+    public class DefaultObjectManager : IObjectManager
     {
         public Hero Hero
         {

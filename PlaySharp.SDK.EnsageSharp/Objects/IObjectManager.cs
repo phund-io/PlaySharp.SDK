@@ -14,14 +14,14 @@ namespace PlaySharp.SDK.Objects
     [SecuritySafeCritical]
     public interface IObjectManager : IObjectManagerProvider<Entity, uint, Hero>
     {
-        IEnumerable<LinearProjectile> LinearProjectiles { [SecuritySafeCritical] get; }
+        IEnumerable<LinearProjectile> LinearProjectiles { [ItemNotNull] get; }
 
-        IEnumerable<ParticleEffect> ParticleEffects { [SecuritySafeCritical] get; }
+        IEnumerable<ParticleEffect> ParticleEffects { [ItemNotNull] get; }
 
-        Player Player { [SecuritySafeCritical] get; }
+        Player Player { [NotNull] get; }
 
-        IEnumerable<Projectile> Projectiles { [SecuritySafeCritical] get; }
+        IEnumerable<Projectile> Projectiles { [ItemNotNull] get; }
 
-        IEnumerable<TrackingProjectile> TrackingProjectiles { [SecuritySafeCritical] get; }
+        IEnumerable<TrackingProjectile> TrackingProjectiles { [ItemNotNull] get; }
     }
 }

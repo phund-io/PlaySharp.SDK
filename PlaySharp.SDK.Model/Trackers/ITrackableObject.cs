@@ -9,10 +9,8 @@ namespace PlaySharp.SDK.Trackers
 
     [PublicAPI]
     [SecuritySafeCritical]
-    public interface ITrackableObject<out TId, out TObject>
+    public interface ITrackableObject<out TObject>
     {
-        TId Id { [NotNull] get; }
-
         TObject Instance { [NotNull] get; }
     }
 }

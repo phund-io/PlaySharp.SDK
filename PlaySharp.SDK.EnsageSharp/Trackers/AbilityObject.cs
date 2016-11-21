@@ -14,16 +14,13 @@ namespace PlaySharp.SDK.Trackers
     [SecuritySafeCritical]
     public class AbilityObject : IAbilityObject
     {
-        public AbilityObject(string id, Unit instance, params ParticleEffect[] particles)
+        public AbilityObject(Ability instance, params ParticleEffect[] particles)
         {
-            this.Id = id;
             this.Instance = instance;
             this.Particles = particles;
         }
 
-        public string Id { get; }
-
-        public Unit Instance { get; }
+        public Ability Instance { get; }
 
         public IReadOnlyList<ParticleEffect> Particles { get; }
     }

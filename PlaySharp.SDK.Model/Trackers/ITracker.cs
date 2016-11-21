@@ -1,4 +1,4 @@
-﻿// <copyright file="IAttackTracker.cs" company="PlaySharp">
+// <copyright file="ITracker.cs" company="PlaySharp">
 //    Copyright (c) 2016 PlaySharp.
 // </copyright>
 namespace PlaySharp.SDK.Trackers
@@ -9,7 +9,7 @@ namespace PlaySharp.SDK.Trackers
 
     [PublicAPI]
     [SecuritySafeCritical]
-    public interface IAttackTracker : IAttackTracker<IAttackObject>
+    public interface ITracker<T> : INotifyCollection<T>
     {
     }
 }

@@ -13,7 +13,7 @@ namespace PlaySharp.SDK.Composition
 
     [PublicAPI]
     [SecuritySafeCritical]
-    public sealed class EnsageContainerRepository : ContainerRepositoryBase<EnsageServiceContext>
+    public sealed class EnsageContainerRepository : ContainerRepository<EnsageServiceContext>
     {
         private static readonly object SyncRoot = new object();
 

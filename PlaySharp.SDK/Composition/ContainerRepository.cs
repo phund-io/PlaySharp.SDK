@@ -1,4 +1,4 @@
-﻿// <copyright file="ContainerRepositoryBase.cs" company="PlaySharp">
+﻿// <copyright file="ContainerRepository.cs" company="PlaySharp">
 //    Copyright (c) 2016 PlaySharp.
 // </copyright>
 namespace PlaySharp.SDK.Composition
@@ -17,12 +17,12 @@ namespace PlaySharp.SDK.Composition
 
     [PublicAPI]
     [SecuritySafeCritical]
-    public abstract class ContainerRepositoryBase<TContext>
+    public abstract class ContainerRepository<TContext>
         where TContext : class, IServiceContext
     {
         private static readonly ILog Log = AssemblyLogs.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
-        protected ContainerRepositoryBase()
+        protected ContainerRepository()
         {
             this.Catalog = new AggregateCatalog();
 

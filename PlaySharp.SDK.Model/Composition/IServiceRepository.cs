@@ -4,25 +4,18 @@
 namespace PlaySharp.SDK.Composition
 {
     using System;
-    using System.Collections.Generic;
-    using System.Collections.Specialized;
     using System.Security;
 
+    using PlaySharp.SDK.Trackers;
     using PlaySharp.Toolkit.Helper.Annotations;
 
     [PublicAPI]
     [SecuritySafeCritical]
-    public interface IServiceRepository<TService> : INotifyCollectionChanged
+    public interface IServiceRepository<TService> : INotifyCollection<TService>
         where TService : class
     {
         event EventHandler<ActiveServiceChangedEventArgs<TService>> ActiveChanged;
 
         TService ActiveService { get; set; }
-
-        IReadOnlyList<TService> Services { get; }
-
-        void Register(TService service);
-
-        void Unregister(TService service);
     }
 }

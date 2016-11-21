@@ -3,16 +3,13 @@
 // </copyright>
 namespace PlaySharp.SDK.Trackers
 {
-    using System.Collections.Generic;
-    using System.Collections.Specialized;
     using System.Security;
 
     using PlaySharp.Toolkit.Helper.Annotations;
 
     [PublicAPI]
     [SecuritySafeCritical]
-    public interface IAbilityTracker<out TId, out TAbilityObject> : INotifyCollectionChanged
+    public interface IAbilityTracker<T> : ITracker<T>
     {
-        IReadOnlyList<IAbilityObject<TId, TAbilityObject>> Attacks { [NotNull] [ItemNotNull] get; }
     }
 }

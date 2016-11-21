@@ -36,6 +36,10 @@
     <AssemblyOriginatorKeyFile>..\tools\key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PlaySharp.Toolkit\Deploy\References\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="PlaySharp.Toolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7e3dc52b16ce4f66, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\PlaySharp.Toolkit\Deploy\Core\PlaySharp.Toolkit.dll</HintPath>
@@ -53,11 +57,13 @@
     <Compile Include="..\tools\GlobalAssemblyInfo.cs">
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="Composition\CollectionChangedBase.cs" />
+    <Compile Include="Composition\Attributes\RegisterConfigAttribute.cs" />
+    <Compile Include="Composition\ObjectProviderAttribute.cs" />
+    <Compile Include="Providers\DefaultConfig.cs" />
     <Compile Include="ImageLoader\IImageLoader.cs" />
     <Compile Include="ImageLoader\ImageCache.cs" />
-    <Compile Include="Composition\ContainerRepositoryBase.cs" />
-    <Compile Include="Composition\ServiceRepositoryBase.cs" />
+    <Compile Include="Composition\ContainerRepository.cs" />
+    <Compile Include="Composition\ServiceRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -65,13 +71,7 @@
       <Link>Properties\key.snk</Link>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Objects\" />
-    <Folder Include="Orbwalking\" />
-    <Folder Include="Prediction\" />
-    <Folder Include="Targetselection\" />
-    <Folder Include="Threading\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\PlaySharp.SDK.Model\PlaySharp.SDK.Model.csproj">
       <Project>{f24761cd-2436-4e6a-a930-038918926945}</Project>

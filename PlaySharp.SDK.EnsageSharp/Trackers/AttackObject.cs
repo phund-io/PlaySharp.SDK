@@ -3,6 +3,7 @@
 // </copyright>
 namespace PlaySharp.SDK.Trackers
 {
+    using System;
     using System.Security;
 
     using Ensage;
@@ -13,14 +14,14 @@ namespace PlaySharp.SDK.Trackers
     [SecuritySafeCritical]
     public class AttackObject : IAttackObject
     {
-        public AttackObject(string id, Unit instance, NetworkActivity state = NetworkActivity.Idle)
+        public AttackObject(Unit instance, NetworkActivity state = NetworkActivity.Idle, long tick = 0)
         {
-            this.Id = id;
             this.Instance = instance;
             this.State = state;
+            this.Created = tick > 0 ? tick : Environment.TickCount;
         }
 
-        public string Id { get; }
+        public long Created { get; }
 
         public Unit Instance { get; }
 

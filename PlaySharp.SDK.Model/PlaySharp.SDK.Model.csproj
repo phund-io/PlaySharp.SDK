@@ -56,9 +56,16 @@
     <Compile Include="Casting\ITargetAbility.cs" />
     <Compile Include="Composition\ActiveServiceChangedEventArgs.cs" />
     <Compile Include="Composition\ContextContainer.cs" />
-    <Compile Include="Composition\IConfigurationRepository.cs" />
+    <Compile Include="Configuration\IConfig.cs" />
+    <Compile Include="Composition\Metadata\IConfigMetadata.cs" />
+    <Compile Include="Composition\Metadata\IObjectManagerMetadata.cs" />
+    <Compile Include="Composition\Metadata\IOrbwalkerMetadata.cs" />
+    <Compile Include="Composition\Metadata\IPredictionMetadata.cs" />
     <Compile Include="Composition\IServiceContext.cs" />
+    <Compile Include="Composition\Metadata\IServiceMetadata.cs" />
     <Compile Include="Composition\IServiceRepository.cs" />
+    <Compile Include="Composition\Metadata\ITargetSelectorMetadata.cs" />
+    <Compile Include="Composition\Metadata\ITrackerMetadata.cs" />
     <Compile Include="Game\GameState.cs" />
     <Compile Include="Events\OnDXBeginScene.cs" />
     <Compile Include="Events\OnDXEndScene.cs" />
@@ -96,7 +103,10 @@
     <Compile Include="Trackers\IAttackObject.cs" />
     <Compile Include="Trackers\IAttackTracker.cs" />
     <Compile Include="Trackers\IAttackTrackerRepository.cs" />
+    <Compile Include="Trackers\INotifyCollection.cs" />
     <Compile Include="Trackers\ITrackableObject.cs" />
+    <Compile Include="Trackers\ITracker.cs" />
+    <Compile Include="Trackers\NotifyCollection.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\tools\key.snk">

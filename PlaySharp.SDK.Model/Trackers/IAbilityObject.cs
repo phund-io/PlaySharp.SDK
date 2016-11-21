@@ -9,7 +9,7 @@ namespace PlaySharp.SDK.Trackers
 
     [PublicAPI]
     [SecuritySafeCritical]
-    public interface IAbilityObject<out TId, out TObject> : ITrackableObject<TId, TObject>
+    public interface IAbilityObject<out TObject> : ITrackableObject<TObject>
     {
     }
 }

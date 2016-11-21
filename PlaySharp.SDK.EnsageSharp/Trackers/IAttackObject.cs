@@ -11,7 +11,7 @@ namespace PlaySharp.SDK.Trackers
 
     [PublicAPI]
     [SecuritySafeCritical]
-    public interface IAttackObject : IAttackObject<string, Unit>
+    public interface IAttackObject : IAttackObject<Unit>
     {
         NetworkActivity State { get; }
     }
