@@ -19,8 +19,8 @@ namespace PlaySharp.SDK.Providers
     using PlaySharp.Toolkit.Logging;
 
     [PublicAPI]
-    [RegisterConfig("SDK")]
     [SecuritySafeCritical]
+    [RegisterConfig("SDK")]
     public class DefaultConfig : IConfig, IDisposable
     {
         private static readonly ILog Log = AssemblyLogs.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
@@ -39,7 +39,7 @@ namespace PlaySharp.SDK.Providers
 
         public string StoreFile { [NotNull] get; [NotNull] set; }
 
-        private Dictionary<string, object> Store { get; set; } = new Dictionary<string, object>();
+        private Dictionary<string, object> Store { [NotNull] get; [NotNull] set; } = new Dictionary<string, object>();
 
         public object this[string key]
         {

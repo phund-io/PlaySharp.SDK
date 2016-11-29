@@ -28,7 +28,7 @@ namespace PlaySharp.SDK.Extensions
                 throw new ArgumentNullException(nameof(name));
             }
 
-            return unit.Spellbook.Spells.FirstOrDefault(s => s.Name == name);
+            return unit.Spellbook.Spells.First(s => s.Name == name);
         }
     }
 }
