@@ -35,13 +35,20 @@ namespace PlaySharp.SDK.Trackers
             return item;
         }
 
-        public void OnCollectionChanged(NotifyCollectionChangedAction type, object item)
+        public void AddRange(IList<T> items)
         {
-            if (item == null)
-            {
-                throw new ArgumentNullException(nameof(item));
-            }
+            this.Objects.AddRange(items);
+            this.OnCollectionChanged(NotifyCollectionChangedAction.Add, items);
+        }
 
+        public void Clear()
+        {
+            this.Objects.Clear();
+            this.OnCollectionChanged(NotifyCollectionChangedAction.Reset);
+        }
+
+        public void OnCollectionChanged(NotifyCollectionChangedAction type, object item = null)
+        {
             this.CollectionChanged?.Invoke(
                     this,
                     new NotifyCollectionChangedEventArgs(type, item));

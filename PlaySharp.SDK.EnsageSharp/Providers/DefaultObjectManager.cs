@@ -1,4 +1,4 @@
-﻿// <copyright file="EnsageObjectManager.cs" company="PlaySharp">
+﻿// <copyright file="DefaultObjectManager.cs" company="PlaySharp">
 //    Copyright (c) 2016 PlaySharp.
 // </copyright>
 namespace PlaySharp.SDK.Providers

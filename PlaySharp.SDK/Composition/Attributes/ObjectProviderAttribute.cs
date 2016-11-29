@@ -1,7 +1,7 @@
 ﻿// <copyright file="ObjectProviderAttribute.cs" company="PlaySharp">
 //    Copyright (c) 2016 PlaySharp.
 // </copyright>
-namespace PlaySharp.SDK.Composition
+namespace PlaySharp.SDK.Composition.Attributes
 {
     using System;
     using System.ComponentModel.Composition;

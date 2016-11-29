@@ -74,7 +74,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\..\tools\key.snk">
+    <None Include="..\tools\key.snk">
       <Link>Properties\key.snk</Link>
     </None>
   </ItemGroup>

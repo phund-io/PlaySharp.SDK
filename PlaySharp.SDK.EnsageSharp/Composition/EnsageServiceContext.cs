@@ -8,6 +8,7 @@ namespace PlaySharp.SDK.Composition
 
     using Ensage;
 
+    using PlaySharp.SDK.Composition.Repositories;
     using PlaySharp.Toolkit.Helper.Annotations;
 
     [PublicAPI]

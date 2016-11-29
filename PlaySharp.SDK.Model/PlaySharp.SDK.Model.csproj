@@ -55,8 +55,17 @@
     <Compile Include="Casting\ISkillshotAbility.cs" />
     <Compile Include="Casting\ITargetAbility.cs" />
     <Compile Include="Composition\ActiveServiceChangedEventArgs.cs" />
+    <Compile Include="Composition\EntryPoints\IAssembly.cs" />
     <Compile Include="Composition\ContextContainer.cs" />
+    <Compile Include="Composition\EntryPoints\IBootstrapper.cs" />
+    <Compile Include="Composition\Repositories\IContainerRepository.cs" />
+    <Compile Include="Composition\EntryPoints\ILibrary.cs" />
+    <Compile Include="Composition\Repositories\IOrbwalkerRepository.cs" />
+    <Compile Include="Composition\Repositories\IPredictionRepository.cs" />
+    <Compile Include="Composition\Repositories\ITargetSelectorRepository.cs" />
     <Compile Include="Composition\Metadata\IAbilityTrackerMetadata.cs" />
+    <Compile Include="Composition\Metadata\IAssemblyMetadata.cs" />
+    <Compile Include="Composition\Metadata\ILibraryMetadata.cs" />
     <Compile Include="Configuration\IConfig.cs" />
     <Compile Include="Composition\Metadata\IConfigMetadata.cs" />
     <Compile Include="Composition\Metadata\IObjectManagerMetadata.cs" />
@@ -64,7 +73,7 @@
     <Compile Include="Composition\Metadata\IPredictionMetadata.cs" />
     <Compile Include="Composition\IServiceContext.cs" />
     <Compile Include="Composition\Metadata\IServiceMetadata.cs" />
-    <Compile Include="Composition\IServiceRepository.cs" />
+    <Compile Include="Composition\Repositories\IServiceRepository.cs" />
     <Compile Include="Composition\Metadata\ITargetSelectorMetadata.cs" />
     <Compile Include="Composition\Metadata\IAttackTrackerMetadata.cs" />
     <Compile Include="Game\GameState.cs" />
@@ -87,6 +96,7 @@
     <Compile Include="Game\DamageType.cs" />
     <Compile Include="ImageLoader\IImageCache.cs" />
     <Compile Include="ImageLoader\ImageType.cs" />
+    <Compile Include="Menu\IMenu.cs" />
     <Compile Include="Objects\IObjectManagerProvider.cs" />
     <Compile Include="Orbwalking\IOrbwalker.cs" />
     <Compile Include="Orbwalking\OnAttack.cs" />
@@ -94,6 +104,10 @@
     <Compile Include="Orbwalking\OnPreAttack.cs" />
     <Compile Include="Prediction\IPrediction.cs" />
     <Compile Include="Prediction\IPredictionOutput.cs" />
+    <Compile Include="Rendering\IRenderer.cs" />
+    <Compile Include="Events\EventHandlerNoSender.cs" />
+    <Compile Include="Composition\Metadata\IRendererMetadata.cs" />
+    <Compile Include="Rendering\RenderMode.cs" />
     <Compile Include="Targetselection\ITargetSelector.cs" />
     <Compile Include="Targetselection\OnTargetChanged.cs" />
     <Compile Include="Orbwalking\OrbwalkingMode.cs" />

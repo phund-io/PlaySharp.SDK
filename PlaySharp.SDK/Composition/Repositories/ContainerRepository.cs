@@ -1,7 +1,7 @@
-﻿// <copyright file="ContainerRepository.cs" company="PlaySharp">
+// <copyright file="ContainerRepository.cs" company="PlaySharp">
 //    Copyright (c) 2016 PlaySharp.
 // </copyright>
-namespace PlaySharp.SDK.Composition
+namespace PlaySharp.SDK.Composition.Repositories
 {
     using System;
     using System.Collections.Generic;
@@ -17,7 +17,7 @@ namespace PlaySharp.SDK.Composition
 
     [PublicAPI]
     [SecuritySafeCritical]
-    public abstract class ContainerRepository<TContext>
+    public abstract class ContainerRepository<TContext> : IContainerRepository<TContext>
         where TContext : class, IServiceContext
     {
         private static readonly ILog Log = AssemblyLogs.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);

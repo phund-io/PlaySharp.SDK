@@ -57,13 +57,17 @@
     <Compile Include="..\tools\GlobalAssemblyInfo.cs">
       <Link>Properties\GlobalAssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="Composition\Attributes\RegisterAssemblyAttribute.cs" />
     <Compile Include="Composition\Attributes\RegisterConfigAttribute.cs" />
-    <Compile Include="Composition\ObjectProviderAttribute.cs" />
+    <Compile Include="Composition\Attributes\RegisterLibraryAttribute.cs" />
+    <Compile Include="Composition\Attributes\RegisterRendererAttribute.cs" />
+    <Compile Include="Composition\EntryPoints\EntryPoint.cs" />
+    <Compile Include="Composition\Attributes\ObjectProviderAttribute.cs" />
     <Compile Include="Providers\DefaultConfig.cs" />
     <Compile Include="ImageLoader\IImageLoader.cs" />
     <Compile Include="ImageLoader\ImageCache.cs" />
-    <Compile Include="Composition\ContainerRepository.cs" />
-    <Compile Include="Composition\ServiceRepository.cs" />
+    <Compile Include="Composition\Repositories\ContainerRepository.cs" />
+    <Compile Include="Composition\Repositories\ServiceRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

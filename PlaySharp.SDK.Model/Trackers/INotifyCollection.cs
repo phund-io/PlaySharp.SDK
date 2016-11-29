@@ -18,6 +18,10 @@ namespace PlaySharp.SDK.Trackers
         [NotNull]
         T Add([NotNull] T item);
 
+        void AddRange([ItemNotNull] IList<T> items);
+
+        void Clear();
+
         void OnCollectionChanged(NotifyCollectionChangedAction type, [NotNull] object item);
 
         [NotNull]

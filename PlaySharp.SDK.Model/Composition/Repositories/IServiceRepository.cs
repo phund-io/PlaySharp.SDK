@@ -1,7 +1,7 @@
 // <copyright file="IServiceRepository.cs" company="PlaySharp">
 //    Copyright (c) 2016 PlaySharp.
 // </copyright>
-namespace PlaySharp.SDK.Composition
+namespace PlaySharp.SDK.Composition.Repositories
 {
     using System;
     using System.Security;

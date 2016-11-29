@@ -5,6 +5,7 @@ namespace PlaySharp.SDK.Composition
 {
     using System.Security;
 
+    using PlaySharp.SDK.Providers;
     using PlaySharp.Toolkit.Helper.Annotations;
 
     [PublicAPI]

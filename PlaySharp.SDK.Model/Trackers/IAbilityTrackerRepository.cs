@@ -5,7 +5,7 @@ namespace PlaySharp.SDK.Trackers
 {
     using System.Security;
 
-    using PlaySharp.SDK.Composition;
+    using PlaySharp.SDK.Composition.Repositories;
     using PlaySharp.Toolkit.Helper.Annotations;
 
     [PublicAPI]

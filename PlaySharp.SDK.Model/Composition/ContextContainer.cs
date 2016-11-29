@@ -59,6 +59,7 @@ namespace PlaySharp.SDK.Composition
                 throw new ArgumentNullException(nameof(instance));
             }
 
+            Log.Debug($"BuildUp {instance.GetType().Name}");
             this.Container.SatisfyImportsOnce(instance);
         }
 

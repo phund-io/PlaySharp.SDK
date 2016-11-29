@@ -1,10 +1,11 @@
-﻿// <copyright file="DefaultConfig.cs" company="PlaySharp">
+// <copyright file="DefaultConfig.cs" company="PlaySharp">
 //    Copyright (c) 2016 PlaySharp.
 // </copyright>
 namespace PlaySharp.SDK.Providers
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.IO;
     using System.Reflection;
     using System.Security;
@@ -32,6 +33,10 @@ namespace PlaySharp.SDK.Providers
             this.Load();
         }
 
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public event PropertyChangingEventHandler PropertyChanging;
+
         public string StoreFile { [NotNull] get; [NotNull] set; }
 
         private Dictionary<string, object> Store { get; set; } = new Dictionary<string, object>();
@@ -49,13 +54,18 @@ namespace PlaySharp.SDK.Providers
             }
         }
 
+        public void Bind(object target)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Dispose()
         {
             this.Dispose(true);
             GC.SuppressFinalize(this);
         }
 
-        public T GetValue<T>(string key) where T : class
+        public T GetValue<T>(string key)
         {
             if (key == null)
             {
@@ -67,7 +77,7 @@ namespace PlaySharp.SDK.Providers
                 throw new KeyNotFoundException(key);
             }
 
-            return this.Store[key] as T;
+            return (T)this.Store[key];
         }
 
         public void Load()
@@ -97,7 +107,7 @@ namespace PlaySharp.SDK.Providers
             }
         }
 
-        public void SetValue<T>(string key, T value) where T : class
+        public void SetValue<T>(string key, T value)
         {
             if (key == null)
             {
@@ -109,7 +119,17 @@ namespace PlaySharp.SDK.Providers
                 throw new ArgumentNullException(nameof(value));
             }
 
+            if (this.Store.ContainsKey(key))
+            {
+                if (this.Store[key].Equals(value))
+                {
+                    return;
+                }
+            }
+
+            this.OnPropertyChanging(key);
             this.Store[key] = value;
+            this.OnPropertyChanged(key);
         }
 
         protected virtual void Dispose(bool disposing)
@@ -125,6 +145,18 @@ namespace PlaySharp.SDK.Providers
             }
 
             this.disposed = true;
+        }
+
+        [NotifyPropertyChangedInvocator]
+        protected virtual void OnPropertyChanged(string propertyName = null)
+        {
+            this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        [NotifyPropertyChangedInvocator]
+        protected virtual void OnPropertyChanging(string propertyName = null)
+        {
+            this.PropertyChanging?.Invoke(this, new PropertyChangingEventArgs(propertyName));
         }
     }
 }

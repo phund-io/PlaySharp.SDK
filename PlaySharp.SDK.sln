@@ -24,6 +24,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{C9CB63B2
 		tools\key.snk = tools\key.snk
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAssembly", "TestAssembly\TestAssembly.csproj", "{6E982325-9930-4408-83E3-6681698A5E9C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +48,10 @@ Global
 		{AF9DEF0F-47B3-4B00-A569-9AB837D7321F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF9DEF0F-47B3-4B00-A569-9AB837D7321F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF9DEF0F-47B3-4B00-A569-9AB837D7321F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E982325-9930-4408-83E3-6681698A5E9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E982325-9930-4408-83E3-6681698A5E9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E982325-9930-4408-83E3-6681698A5E9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E982325-9930-4408-83E3-6681698A5E9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

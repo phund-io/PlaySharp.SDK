@@ -12,13 +12,13 @@ namespace PlaySharp.SDK.Composition.Metadata
     [SecuritySafeCritical]
     public interface IServiceMetadata
     {
-        [DefaultValue("Orbwalker")]
+        [DefaultValue("")]
         string Description { get; }
 
         [DefaultValue("Default")]
         string Name { get; }
 
-        [DefaultValue("1.0.0.0")]
+        [DefaultValue("")]
         string Version { get; }
     }
 }

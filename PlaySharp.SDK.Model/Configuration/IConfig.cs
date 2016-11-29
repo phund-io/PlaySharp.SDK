@@ -3,22 +3,25 @@
 // </copyright>
 namespace PlaySharp.SDK.Configuration
 {
+    using System.ComponentModel;
     using System.Security;
 
     using PlaySharp.Toolkit.Helper.Annotations;
 
     [PublicAPI]
     [SecuritySafeCritical]
-    public interface IConfig
+    public interface IConfig : INotifyPropertyChanging, INotifyPropertyChanged
     {
         object this[string key] { get; set; }
 
-        T GetValue<T>(string key) where T : class;
+        void Bind(object target);
+
+        T GetValue<T>(string key);
 
         void Load();
 
         void Save();
 
-        void SetValue<T>(string key, T value) where T : class;
+        void SetValue<T>(string key, T value);
     }
 }
