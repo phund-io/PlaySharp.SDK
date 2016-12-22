@@ -155,5 +155,42 @@ namespace PlaySharp.SDK.Composition
                 Log.Error(e);
             }
         }
+
+        private void Shutdown()
+        {
+            foreach (var assembly in this.Assemblies.Where(a => a.IsValueCreated))
+            {
+                Log.Debug($"Deactivate: {assembly.Metadata.Name}");
+                assembly.Value.Deactivate();
+            }
+
+            foreach (var assembly in this.Libraries.Where(a => a.IsValueCreated))
+            {
+                Log.Debug($"Deactivate: {assembly.Metadata.Name}");
+                assembly.Value.Deactivate();
+            }
+        }
+
+        private void Startup()
+        {
+            foreach (var assembly in this.Libraries)
+            {
+                Log.Debug($"Activate: {assembly.Metadata.Name}");
+                assembly.Value.Activate();
+            }
+
+            foreach (var assembly in this.Assemblies)
+            {
+                if (assembly.Metadata.Units.Any(u => u == ObjectManager.LocalHero.Name))
+                {
+                    Log.Debug($"Activate: {assembly.Metadata.Name}");
+                    assembly.Value.Activate();
+                }
+                else
+                {
+                    Log.Debug($"Skip: {assembly.Metadata.Name}");
+                }
+            }
+        }
     }
 }

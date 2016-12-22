@@ -78,10 +78,16 @@ namespace PlaySharp.SDK.Composition.EntryPoints
             }
         }
 
-        protected abstract void OnActivate();
+        protected virtual void OnActivate()
+        {
+        }
 
-        protected abstract void OnDeactivate();
+        protected virtual void OnDeactivate()
+        {
+        }
 
-        protected abstract void OnInitialize();
+        protected virtual void OnInitialize()
+        {
+        }
     }
 }

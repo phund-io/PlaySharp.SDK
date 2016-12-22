@@ -77,10 +77,11 @@
     <Compile Include="Composition\Attributes\RegisterPredictionAttribute.cs" />
     <Compile Include="Composition\Attributes\RegisterTargetSelectorAttribute.cs" />
     <Compile Include="Composition\EnsageBootstrapper.cs" />
+    <Compile Include="Composition\EnsageEventService.cs" />
     <Compile Include="Composition\EntryPoints\EnsageAssembly.cs" />
     <Compile Include="Composition\EntryPoints\EnsageLibrary.cs" />
     <Compile Include="Composition\Repositories\IContainerRepository.cs" />
-    <Compile Include="Composition\EntryPoints\IEnsage.cs" />
+    <Compile Include="Composition\IEnsage.cs" />
     <Compile Include="Composition\Repositories\IOrbwalkerRepository.cs" />
     <Compile Include="Composition\Repositories\IPredictionRepository.cs" />
     <Compile Include="Composition\Repositories\ITargetSelectorRepository.cs" />
