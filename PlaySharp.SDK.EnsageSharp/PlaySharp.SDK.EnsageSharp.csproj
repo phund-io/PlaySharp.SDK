@@ -39,14 +39,22 @@
     <Reference Include="Ensage">
       <HintPath>..\..\PlaySharp.Toolkit\Deploy\References\Ensage.dll</HintPath>
     </Reference>
-    <Reference Include="PlaySharp.Toolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7e3dc52b16ce4f66, processorArchitecture=MSIL">
+    <Reference Include="PlaySharp.SDK">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Deploy\References\PlaySharp.SDK.dll</HintPath>
+    </Reference>
+    <Reference Include="PlaySharp.SDK.Model">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Deploy\References\PlaySharp.SDK.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="PlaySharp.Toolkit">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\PlaySharp.Toolkit\Deploy\Core\PlaySharp.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX">
       <HintPath>..\..\PlaySharp.Toolkit\Deploy\References\SharpDX.dll</HintPath>
     </Reference>
-    <Reference Include="SharpDX.Direct3D9, Version=2.6.3.0, Culture=neutral, PublicKeyToken=345b829e6e492981, processorArchitecture=MSIL">
+    <Reference Include="SharpDX.Direct3D9">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\PlaySharp.Toolkit\Deploy\References\SharpDX.Direct3D9.dll</HintPath>
     </Reference>
@@ -119,16 +127,6 @@
     </None>
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <ProjectReference Include="..\PlaySharp.SDK.Model\PlaySharp.SDK.Model.csproj">
-      <Project>{f24761cd-2436-4e6a-a930-038918926945}</Project>
-      <Name>PlaySharp.SDK.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PlaySharp.SDK\PlaySharp.SDK.csproj">
-      <Project>{85c3eedb-9715-4a4e-9c12-7a751517ec95}</Project>
-      <Name>PlaySharp.SDK</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>mkdir "$(SolutionDir)Deploy\References\"

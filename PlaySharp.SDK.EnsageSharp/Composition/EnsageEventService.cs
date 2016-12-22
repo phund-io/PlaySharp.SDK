@@ -1,4 +1,7 @@
-﻿namespace PlaySharp.SDK.Composition
+﻿// <copyright file="EnsageEventService.cs" company="PlaySharp">
+//    Copyright (c) 2016 PlaySharp.
+// </copyright>
+namespace PlaySharp.SDK.Composition
 {
     using System;
     using System.Reflection;
@@ -7,18 +10,17 @@
 
     using log4net;
 
-    using PlaySharp.SDK.Extensions;
     using PlaySharp.Toolkit.Extensions;
     using PlaySharp.Toolkit.Logging;
 
     public class EnsageEventService
     {
+        private static readonly ILog Log = AssemblyLogs.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
+
         public EnsageEventService()
         {
             Game.OnUpdate += this.OnUpdate;
         }
-
-        private static readonly ILog Log = AssemblyLogs.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
         private GameState LastState { get; set; }
 

@@ -11,14 +11,14 @@ namespace PlaySharp.SDK.Composition.EntryPoints
 
     public abstract class EnsageAsyncAssembly : EnsageAssembly, IAsyncAssembly
     {
+        public abstract bool CanExecute { get; }
+
+        public abstract Task ExecuteAsync();
+
         public virtual async Task OnUpdateAsync()
         {
             // TODO: impl async handler
         }
-
-        public abstract bool CanExecute { get; }
-
-        public abstract Task ExecuteAsync();
     }
 
     public interface IAsyncAssembly

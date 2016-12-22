@@ -36,11 +36,14 @@
     <AssemblyOriginatorKeyFile>..\tools\key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+    <Reference Include="Newtonsoft.Json">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\PlaySharp.Toolkit\Deploy\References\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="PlaySharp.Toolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7e3dc52b16ce4f66, processorArchitecture=MSIL">
+    <Reference Include="PlaySharp.SDK.Model">
+      <HintPath>..\Deploy\References\PlaySharp.SDK.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="PlaySharp.Toolkit">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\PlaySharp.Toolkit\Deploy\Core\PlaySharp.Toolkit.dll</HintPath>
     </Reference>
@@ -76,12 +79,6 @@
     </None>
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <ProjectReference Include="..\PlaySharp.SDK.Model\PlaySharp.SDK.Model.csproj">
-      <Project>{f24761cd-2436-4e6a-a930-038918926945}</Project>
-      <Name>PlaySharp.SDK.Model</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>mkdir "$(SolutionDir)Deploy\References\"
